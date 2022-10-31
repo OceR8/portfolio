@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire contact</title> 
+  <link rel="stylesheet" href="asset/css/form.css">
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+
+
+</head>
+  <body>
+
+  
+  
+  <header>
+    <nav class="navBar">
+        <a href="#" class="navLogo"><img src="asset/img/logo-oceane.png" class="navBar__logo" alt="logo-oceane"></a>
+            <ul class="navBar_menu">
+                <li class="nav-item"><a href="index.html#section1" class="nav-link">Accueil</a></li>
+                <li class="nav-item"><a href="index.html#presentation" class="nav-link">A propos</a></li>
+                <li class="nav-item"><a href="index.html#realisation" class="nav-link">Réalisations</a></li>
+                <li class="nav-item"><a href="form.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navBar_hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+    </nav>
+  </header>
+
+    
+  <section class="formContainer">
+    <h2 style="text-align: center;">Formulaire de contact</h2>
+    <form name="formContact" action="form.html"  method="post" class="formContact">
+      <div class=" row">
+        <div class="col-25">
+          <label for="Nom">Nom:</label>
+          <input type="text" id="Nom" size="60" name="Nom"/>
+        </div>
+      </div>
+      <br />
+      <div class="col-75">
+        <label for="E-mail">Adresse électronique:</label>
+        <input type="text" id="E-mail" size="60" name="Email"/>
+      </div>
+      <br /> 
+        <div class="col-75">
+        <label for="Sujet">Sujet </label>
+          <input type="text" id="Sujet" size="60" name="Sujet"/>
+        </div>
+      <br />
+      <div class="col-75">
+        <label for="Sujet">Commentaire :</label>
+        <input type="text" id="Commentaire" size="60" name="Commentaire"/>
+      </div>
+      <br />
+
+      
+    
+       
+
+      <div class="buttons">
+        <input type="submit" id="myBtn" value="Envoyer" name="Envoyer" />
+        <input type="reset" value="Réinitialiser" name="Réinitialiser" />
+      </div>
+    </form>
+  </section>
+  
+  <script src="asset/js/script.js"></script>
+
+    
+    <script>
+      
+
+      //   const element = document.getElementById("myBtn");
+
+      //   element.addEventListener("click", formValid);
+
+      //   let nom = document.forms["formContact"]["Nom"];
+      //   let email = document.forms["formContact"]["Email"];
+      //   let sujet = document.forms["formContact"]["Sujet"];
+      //   let commentaire = document.forms["formContact"]["Commentaire"]; 
+
+      //   function formValid() {
+      //   if (nom.value == "") {
+      //     alert("Mettez votre nom.");
+      //     nom.focus();
+      //     return false;
+      //   }
+      //   if (email.value == "") {
+      //     alert("Mettez une adresse email valide.");
+      //     email.focus();
+      //     return false;
+      //   }
+      //   if (email.value.indexOf("@", 0) < 0) {
+      //     alert("Mettez une adresse email valide.");
+      //     email.focus();
+      //     return false;
+      //   }
+      //   if (email.value.indexOf(".", 0) < 0) {
+      //     alert("Mettez une adresse email valide.");
+      //     email.focus();
+      //     return false;
+      //   }
+      //   if (sujet.value == "") {
+      //     alert("Votre sujET.");
+      //     sujet.focus();
+      //     return false;
+      //   }
+      //   if (commentaire.value == "") {
+      //     alert("Écrivez un commentaire.");
+      //     commentaire.focus();
+      //     return false;
+      //   }
+      //   return true;
+      // }
+
+
+      
+      const element = document.getElementById("myBtn");
+
+      element.addEventListener("click", formValidation);
+
+      let nom = document.forms["formContact"]["Nom"];
+      let email = document.forms["formContact"]["Email"];
+      let sujet = document.forms["formContact"]["Sujet"];
+      let commentaire = document.forms["formContact"]["Commentaire"]; 
+
+      function formValidation() {
+      if (nom.value == "") {
+        alert("Mettez votre nom.");
+        nom.focus();
+        return false;
+      }
+      if (email.value == "") {
+        alert("Mettez une adresse email valide.");
+        email.focus();
+        return false;
+      }
+      if (email.value.indexOf("@", 0) < 0) {
+        alert("Mettez une adresse email valide.");
+        email.focus();
+        return false;
+      }
+      if (email.value.indexOf(".", 0) < 0) {
+        alert("Mettez une adresse email valide.");
+        email.focus();
+        return false;
+      }
+      if (sujet.value == "") {
+        alert("Votre sujET.");
+        sujet.focus();
+        return false;
+      }
+      if (commentaire.value == "") {
+        alert("Écrivez un commentaire.");
+        commentaire.focus();
+        return false;
+      }
+      return true;
+      }
+    </script>
+  </body>
+</html>
