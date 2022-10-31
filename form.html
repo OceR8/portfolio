@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire contact</title> 
+  <link rel="stylesheet" href="asset/css/form.css">
+  <script src="https://unpkg.com/scrollreveal@4"></script>
+  <link rel="stylesheet" href="asset/js/script.js">
+  <!-- <link rel="stylesheet" href="asset/css/style.css"> -->
+
+
+</head>
+  <body>
+    <header>
+      <nav class="navBar">
+         <a href="#" class="nav-logo"><img src="asset/img/logo-oceane.png" class="navBar__logo" alt="logo-oceane"></a>
+         <ul class="navBar_menu">
+            <li class="nav-item"><a href="index.html#section1" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="index.html#presentation" class="nav-link">A propos</a></li>
+            <li class="nav-item"><a href="index.html#compétences" class="nav-link">Réalisations</a></li>
+            <li class="nav-item"><a href="form.html" class="nav-link">Contact</a></li>
+         </ul>
+         <div class="navBar_hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+         </div>
+      </nav>
+   </header>
+
+    
+  <section class="formContainer">
+    <h2 style="text-align: center;">Formulaire de contact</h2>
+    <form name="formContact" action="asset/php/Formulaire.php" method="post" class="Form" id="form" onsubmit="return Form()">
+      <div class=" row">
+        <div class="col-25">
+          <label for="Nom">Nom:</label>
+          <input type="text" id="Nom" size="60" name="Nom"/>
+        </div>
+      </div>
+      <br/>
+      <div class="col-75">
+        <label for="E-mail">Adresse électronique:</label>
+        <input type="text" id="Email" size="60" name="Email"/>
+      </div>
+      <br />
+      <div class="col-75">
+        <label for="Sujet">Commentaire :</label>
+        <input type="text" id="Commentaire" size="60" name="Commentaire"/>
+      </div>
+      <br />
+
+      <div class="buttons">
+        <input type="submit"  value="Envoyer" name="valider" />
+        <!-- <input type="reset" value="Réinitialiser" name="Réinitialiser" /> -->
+      </div>
+    </form>
+  </section>
+
+<script src="asset/js/script.js"></script>
+  </body>
+</html>
