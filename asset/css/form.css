@@ -1,0 +1,245 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	font-family: 'Syne', sans-serif;
+	/* background-color: rgb(230, 227, 227); */
+	/* color: white; */
+
+}
+
+body {
+	background-color: #000;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.navBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+
+}
+
+
+.navBar_hamburger {
+	display: none;
+}
+
+.bar {
+	display: block;
+	width: 30px;
+	height: 5px;
+	margin: 6px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: white;
+
+}
+
+.navBar_menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-item {
+	margin-left: 5rem;
+}
+
+.nav-link {
+	font-size: 1.6rem;
+	font-weight: 400;
+	color: #333391;
+}
+
+.nav-link:hover {
+	color: #482ff7;
+}
+
+
+.navBar__logo {
+	width: 3em;
+	height: auto;
+	
+}
+
+
+
+.formContact {
+	margin-left: 70px;
+	font-weight: bold;
+	text-align: left;
+	font-family: sans-serif, bold, Arial, Helvetica;
+	font-size: 14px;
+}
+
+section.formContainer {
+	background: whitesmoke;
+	MARGIN-LEFT: auto;
+	MARGIN-RIGHT: auto;
+	width: 100vh;
+	border-radius: 10px;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 38vh;
+
+}
+
+div input {
+	margin-right: 50px;
+}
+
+
+form input {
+	padding: 10px;
+}
+
+form select {
+	background-color: #ffffff;
+	padding: 5px;
+}
+
+form textarea {
+	padding: 10px;
+	margin-bottom: 5px;
+}
+
+form label {
+	display: block;
+	width: 100%;
+	margin-bottom: 5px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+input[type=text],
+select,
+textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: vertical;
+}
+
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+
+input[type=submit] {
+	background-color: #04AA6D;
+	color: white;
+	padding: 10px 20px 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	float: right;
+}
+
+input[type=submit]:hover {
+	background-color: #45a049;
+}
+
+
+.col-25 {
+	float: left;
+	width: 25%;
+	margin-top: 6px;
+}
+
+.col-75 {
+	float: left;
+	width: 75%;
+	margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+	.col-25,
+	.col-75,
+	input[type=submit] {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+
+
+/* TAILLE TELEPHONE */
+@media only screen and (max-width: 768px) {
+
+	/* TAILLE TELEPHONE */
+	@media only screen and (max-width: 768px) {
+		.navBar_menu {
+			position: fixed;
+			left: -100%;
+			top: 5rem;
+			flex-direction: column;
+			background-color: #fff;
+			width: 100%;
+			border-radius: 10px;
+			text-align: center;
+			transition: 0.3s;
+			box-shadow:
+				0 10px 27px rgba(0, 0, 0, 0.05);
+		}
+
+		.navBar_menu.active {
+			left: 0;
+		}
+
+		.nav-item {
+			margin: 2.5rem 0;
+		}
+
+		.navBar_hamburger {
+			display: block;
+			cursor: pointer;
+		}
+
+
+		.navBar_hamburger.active .bar:nth-child(2) {
+			opacity: 0;
+		}
+
+		.navBar_hamburger.active .bar:nth-child(1) {
+			transform: translateY(8px) rotate(45deg);
+		}
+
+		.navBar_hamburger.active .bar:nth-child(3) {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+
+		.navBar__logo {
+			width: 1.5em;
+			height: auto;
+
+		}
+
+	}
+}
